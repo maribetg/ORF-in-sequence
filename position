@@ -1,0 +1,26 @@
+def findGCByPos (reads):
+	gc = [0] * 100 #number of gc bases at each position on the reads
+    total = [0] * 100 #total number of gc bases
+    
+    for read in reads:
+        for i in range(len(read)):
+            if read[i] == 'C' or read[i] == 'G':
+                gc[i] += 1 #increment gc rate
+            totals[i] += 1
+
+    for i in range(len(gc)):  # divide gc with total to get percentage per each base          
+        gc]i] /= float(totals[i])
+    
+    return gc
+
+gc = findGCByPos(seqs)
+plt.plt(range(len(gc)), gc) #plot
+plt.show()
+
+import collections
+#distribution of bases in the seq        
+count = collections.Counter()
+for seq in seqs:
+    count.update(seq)
+print(count)
+   
